@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "service-welcome-system",
+	"version": "${version}",
+	"name": "Service welcome system",
+	"description": "一个服务器进服欢迎系统!",
+	"authors": [
+		"Tutong"
+	],
+	"contact": {
+		"homepage": "https://space.bilibili.com/630095673",
+		"sources": "https://github.com/yht-tutong/service-welcome-system"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/service-welcome-system/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.tutong.welcome.ServiceWelcomeSystem"
+		],
+		"fabric-datagen": [
+			"com.tutong.welcome.ServiceWelcomeSystemDataGenerator"
+		],
+		"client": [
+			"com.tutong.welcome.ServiceWelcomeSystemClient"
+		]
+	},
+	"mixins": [
+		"service-welcome-system.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
